@@ -1,6 +1,5 @@
-# Import the necessary packages
-from consolemenu import *
-from consolemenu.items import *
+# Shagov Aleksei
+
 import math
 
 def qwe(a, b):
@@ -10,7 +9,6 @@ def qwe(a, b):
 def area_test(b, h):
 	a = 0.5 * float(b) * float(h)
 	return a
-
 
 def area_angle(a, b, angle):
 	ar = 0.5 * float(a) * float(b) * float(math.sin(math.radians(int(angle))))
