@@ -1,5 +1,4 @@
-# Generate Armstrong numbers in interval
-
+# Shagov Aleksei
 # Function to count digit in number
 def count_digit(n):
     count = 0
@@ -8,10 +7,9 @@ def count_digit(n):
         count += 1
     return count
 
-# Function to check Armstrong
-def is_armstrong(n):
+def check(n):
 
-    if n< 0:
+    if n < 0:
         return False
     
     number_copy = n
@@ -24,8 +22,7 @@ def is_armstrong(n):
 
     return arm_sum == number_copy
 
-# Looping & displaying if it is Armstrong
 # Here min_vale & max_value are included
 for i in range(1,1000):
-    if is_armstrong(i):
+    if check(i):
         print(i, end=' ')
