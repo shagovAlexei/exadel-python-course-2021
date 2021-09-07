@@ -7,6 +7,8 @@ def count_digit(n):
         count += 1
     return count
 
+
+# Returns true if n is Narcissistic number
 def check(n):
 
     if n < 0:
@@ -22,7 +24,7 @@ def check(n):
 
     return arm_sum == number_copy
 
-# Here min_vale & max_value are included
+# Loop
 for i in range(1,1000):
     if check(i):
         print(i, end=' ')
