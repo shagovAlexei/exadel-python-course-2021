@@ -1,0 +1,31 @@
+# Generate Armstrong numbers in interval
+
+# Function to count digit in number
+def count_digit(n):
+    count = 0
+    while n:
+        n //= 10
+        count += 1
+    return count
+
+# Function to check Armstrong
+def is_armstrong(n):
+
+    if n< 0:
+        return False
+    
+    number_copy = n
+    arm_sum = 0
+    digit = count_digit(n)
+    while n:
+        remainder = n%10
+        arm_sum += remainder**digit
+        n //= 10
+
+    return arm_sum == number_copy
+
+# Looping & displaying if it is Armstrong
+# Here min_vale & max_value are included
+for i in range(1,1000):
+    if is_armstrong(i):
+        print(i, end=' ')
