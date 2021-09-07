@@ -10,10 +10,6 @@ def count_tens(n):
 
 # Returns true if n is Narcissistic number
 def is_narcissistic_number(n):
-
-    if n < 0:
-        return False
-    
     number_copy = n
     arm_sum = 0
     digit = count_tens(n)
@@ -21,7 +17,6 @@ def is_narcissistic_number(n):
         remainder = n%10
         arm_sum += remainder**digit
         n //= 10
-
     return arm_sum == number_copy
 
 # Loop
