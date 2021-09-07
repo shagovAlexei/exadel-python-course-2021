@@ -7,7 +7,6 @@ def count_tens(n):
         count += 1
     return count
 
-
 # Returns true if n is Narcissistic number
 def is_narcissistic_number(n):
     number_copy = n
