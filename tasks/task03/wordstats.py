@@ -23,43 +23,27 @@ are     1       2
 you     1       2
 
 '''
-
 import re
 
-def countOccurrences(str, word):
-
-    # split the string by spaces in a
-    a = str.split(" ")
-
-    # search for pattern in a
-    count = 0
-    for i in range(0, len(a)):
-
-        # if match found increase count
-        if (word == a[i]):
-           count = count + 1
-
-    return count
-
 def Word_Stats(texts):
-	# converted_list = []
-	# count = {}
-	# lines = {}
+	count_entry = {}
+	converted_list = []
+	num_line = {}
 
 	for line_number, text in enumerate(texts):
+			print(line_number, text)
 			converted_text = re.sub('([^A-z^\s])+', '', text).lower()
 			converted_words = converted_text.split()
-
 			for converted_word in converted_words:
 					converted_list.append(converted_word)
-					count[converted_word] = converted_list.count(converted_word)
+					count_entry[converted_word] = converted_list.count(converted_word)
+					if converted_word not in num_line:
+						num_line[converted_word] = line_number
 
-					if converted_word not in lines:
-							lines[converted_word] = line_number
 
-	print(f"word\tcount\tfirst line")
-	for key in count:
-			print(f"{key}\t{count[key]}\t{lines[key]}")
+	print("word\tcount\tfirst line")
+	for key in count_entry:
+		print(f"{key} \t{count_entry[key]} \t{num_line[key]}")
 
 def main():
 	texts = [
