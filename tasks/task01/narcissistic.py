@@ -19,6 +19,6 @@ def is_narcissistic_number(n):
     return arm_sum == number_copy
 
 # Loop
-for i in range(1,1000):
+for i in range(1,1001):
     if is_narcissistic_number(i):
         print(i, end=' ')
