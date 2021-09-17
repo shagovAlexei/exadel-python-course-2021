@@ -55,8 +55,9 @@ def calculate_are_by_sides_and_angle():
 	return print(f"Area is: {area:.0f}")
 
 def main():
+	menu_number = 0
 	print("Welcome to the triangle area calculation tool.")
-	while True:
+	while menu_number != 3:
 		menu_number = input('''
 What would you like to do?\n 
 1. Calculate triangle area by base and height\n 
