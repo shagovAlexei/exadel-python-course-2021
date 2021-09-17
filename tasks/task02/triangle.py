@@ -36,12 +36,12 @@ Enter menu item number: ''')
 			try:
 				Submenu_Base_Height()
 			except:
-				print("Error!!! Something went wrongю. You may not have entered all the variables.")
+				print("Error!!! Something went wrong. You may not have entered all the variables.")
 		elif playermenumain == "2":
 			try:
 				Submenu_Sides_Angle()
 			except:
-				print("Error!!! Something went wrongю. You may not have entered all the variables.")
+				print("Error!!! Something went wrong. You may not have entered all the variables.")
 		elif playermenumain == "3":
 			print("Goodbye!")
 			break
