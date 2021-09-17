@@ -41,11 +41,10 @@ def countOccurrences(str, word):
 
     return count
 
-
 def Word_Stats(texts):
-	converted_list = []
-	count = {}
-	lines = {}
+	# converted_list = []
+	# count = {}
+	# lines = {}
 
 	for line_number, text in enumerate(texts):
 			converted_text = re.sub('([^A-z^\s])+', '', text).lower()
@@ -75,4 +74,4 @@ if __name__ == "__main__":
 	try:
 		main()
 	except:
-		print("Error!!! Something went wrongю.")
+		print("Error!!! Something went wrong.")

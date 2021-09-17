@@ -50,4 +50,4 @@ if __name__ == "__main__":
 	try:
 		main()
 	except:
-		print("Error!!! Something went wrongю.")
+		print("Error!!! Something went wrong.")
