@@ -1,7 +1,6 @@
 # Shagov Aleksei
 import math
 
-
 def Submenu_Base_Height():
 	s = input("Enter your base and height: ")
 	parts = s.split(" ")
@@ -10,7 +9,6 @@ def Submenu_Base_Height():
 	print(base, height)
 	area = 0.5 * float(base) * float(height)
 	return print("Area is: ", area)
-
 
 def Submenu_Sides_Angle():
 	s = input("Enter your side A and side B and angle between them: ")
@@ -35,16 +33,21 @@ What would you like to do?\n
 Enter menu item number: ''')
 
 		if playermenumain == "1":
-			Submenu_Base_Height()
+			try:
+				Submenu_Base_Height()
+			except:
+				print("Error!!! Something went wrongю. You may not have entered all the variables.")
 		elif playermenumain == "2":
-			Submenu_Sides_Angle()
+			try:
+				Submenu_Sides_Angle()
+			except:
+				print("Error!!! Something went wrongю. You may not have entered all the variables.")
 		elif playermenumain == "3":
 			print("Goodbye!")
 			break
-
 
 if __name__ == "__main__":
 	try:
 		main()
 	except:
-		print("Error!!! Something went wrongю. You may not have entered all the variables.")
+		print("Error!!! Something went wrongю.")
