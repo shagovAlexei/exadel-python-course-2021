@@ -47,4 +47,4 @@ if __name__ == "__main__":
 	try:
 		main()
 	except:
-		print("Error!!! Something went wrongю. You may not have entered all the variables.")
+		print("Error!!! Something went wrong. You may not have entered all the variables.")
