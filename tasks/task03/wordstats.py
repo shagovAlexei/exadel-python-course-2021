@@ -4,7 +4,7 @@
 Number of word occurrences
 Number of the sentence where the word appeared for the first time
 
-Note: ignore word case during comparison, i.e. treat “Home”, “home” and “HOME” as the same words. 
+Note: ignore word case during comparison, i.e. treat “Home”, “home” and “HOME” as the same words.
 
 texts = [
    "Hello, World!",
@@ -25,37 +25,33 @@ you     1       2
 '''
 import re
 
-def Word_Stats(texts):
-	count_entry = {}
-	converted_list = []
-	num_line = {}
+def word_stats(texts):
+    count_entry = {}
+    convert_list = []
+    num_line = {}
 
-	for line_number, text in enumerate(texts):
-			print(line_number, text)
-			converted_text = re.sub('([^A-z^\s])+', '', text).lower()
-			converted_words = converted_text.split()
-			for converted_word in converted_words:
-					converted_list.append(converted_word)
-					count_entry[converted_word] = converted_list.count(converted_word)
-					if converted_word not in num_line:
-						num_line[converted_word] = line_number
+    for line, text in enumerate(texts):
+        # print(line, text)
+        convert_text = re.sub('([^A-z^\s])+', '', text).lower()
+        # print(convert_text)
+        convert_words = convert_text.split()
+        for convert_word in convert_words:
+            convert_list.append(convert_word)
+            count_entry[convert_word] = convert_list.count(convert_word)
+            if convert_word not in num_line:
+                num_line[convert_word] = line
 
-
-	print("word\tcount\tfirst line")
-	for key in count_entry:
-		print(f"{key} \t{count_entry[key]} \t{num_line[key]}")
+    print("word\tcount\tfirst line")
+    for key in count_entry:
+        print(f"{key} \t{count_entry[key]} \t{num_line[key]}")
 
 def main():
-	texts = [
-			"Hello, World!",
-			"The world is mine",
-			"Hello, how are you?"
-	]
-	
-	Word_Stats(texts)
+    texts = [
+      "Hello, World!",
+      "The world is mine",
+      "Hello, how are you?"
+    ]
+    word_stats(texts)
 
 if __name__ == "__main__":
-	try:
-		main()
-	except:
-		print("Error!!! Something went wrong.")
+    main()
