@@ -1,27 +1,4 @@
 # Shagov Aleksei
-'''Menu:
-1. Calculate triangle area by base and height
-2. Calculate triangle area by 2 sides and angle between them
-3. Exit
-Enter menu item number: 1
-Enter base and height: 5 6
-Area is: 15
-
-Menu:
-1. Calculate triangle area by base and height
-2. Calculate triangle area by 2 sides and angle between them
-3. Exit
-Enter menu item number: 2
-Enter 2 sides and angle(degrees) between them: 15 8 30
-Area is: 30
-
-Menu:
-1. Calculate triangle area by base and height
-2. Calculate triangle area by 2 sides and angle between them
-3. Exit
-Enter menu item number: 3
-Goodbye!
-'''
 import math
 
 def input_validation(input_string, item):
@@ -39,9 +16,6 @@ def calculate_are_by_base_and_height():
     str = input("Enter your base and height (example: 5 6): ")
     base = input_validation(str, 0)
     height = input_validation(str, 1)
-    # print("base", type(base))
-    # print("height", type(height))
-    # print(base, height)
     area = (0.5 * base * height)
     return print(f"Area is: {area:.0f} ")
 
@@ -50,7 +24,6 @@ def calculate_are_by_sides_and_angle():
     side_a = input_validation(str, 0)
     side_b = input_validation(str, 1)
     angle = input_validation(str, 2)
-    # print(side_a, side_b, angle)
     area = 0.5 * side_a * side_b * math.sin(math.radians(angle))
     return print(f"Area is: {area:.0f}")
 
