@@ -26,15 +26,21 @@ def test_math_3x3():
 def test_math_4x4():
     assert my_pow(4, 4) == 256
 
+def test_math_pow_5x3():
+    assert my_pow(5, 3) == 125
 
-def test_collect_leaves():
-    assert my_pow(4, 4) == 256
+
+def test_with_dict_of_dicts():
+    assert collect_leaves(tree) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+def test_with_list():
+    assert collect_leaves([1, 2, 3]) == [1, 2, 3]
 
 def collect_leaves(tree, list_final=[]):
     if (isinstance(tree, dict)):
         for key in tree:
             value = tree[key]
-            print(value)
+            # print(value)
             if (isinstance(value, dict)):
                 collect_leaves(value)
             elif (isinstance(value, list)):
@@ -44,9 +50,10 @@ def collect_leaves(tree, list_final=[]):
             else:
                 print(f"{value} is non list or dict")
     elif (isinstance(tree, list)):
+        print(tree)
         return(tree)
     else:
-        pass
-    
+        list_final.append(tree)
+
 
 collect_leaves(tree)
