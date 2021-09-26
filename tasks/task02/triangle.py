@@ -1,6 +1,5 @@
 # Shagov Aleksei   
 
-
 import math
 
 def check_positive(s):
@@ -40,7 +39,7 @@ def calculate_are_by_sides_and_angle():
 
 def main():
     menu_number = True
-    menu = '''\nMenu: \n1. Calculate triangle area by base and height \n2. Calculate triangle area by 2 sides and angle between them \n3. Exit\n'''
+    menu = '''\nMenu: \n1. Calculate triangle area by base and height \n2. Calculate triangle area by 2 sides and angle between them \n3. Exit \n'''
     print(menu)
     while menu_number !=3 :
         menu_number = int(input("Enter menu item number: "))
