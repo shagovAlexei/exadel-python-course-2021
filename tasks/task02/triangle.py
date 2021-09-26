@@ -2,7 +2,6 @@
 
 import math
 
-
 def check_positive(s):
     try:
         f = int(s)
