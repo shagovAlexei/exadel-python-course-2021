@@ -14,6 +14,9 @@ tree = {
     "node2": [7, 8, 9]
 }
 
+def my_pow(a, b):
+    return (pow(a, b))
+
 def test_math_2x2():
     assert my_pow(2, 2) == 4
 
@@ -24,8 +27,12 @@ def test_math_4x4():
     assert my_pow(4, 4) == 256
 
 
-def my_pow(a, b):
-    return (pow(a, b))
+def test_collect_leaves():
+    assert my_pow(4, 4) == 256
 
-# def collect_leaves(tree, list_final=[]):
-#     pass
+
+def collect_leaves(tree, list_final=[]):
+    if (isinstance(tree, dict)):
+        for key in tree:
+            value = tree[key]
+            print(value)
