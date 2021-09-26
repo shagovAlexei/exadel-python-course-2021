@@ -54,6 +54,5 @@ def main():
         else:
             print("Invalid input data! Enter 1, 2 or 3!")
 
-
 if __name__ == "__main__":
     main()
