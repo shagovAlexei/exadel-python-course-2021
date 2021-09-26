@@ -36,3 +36,15 @@ def test_tree_params():
         "age": 65,
         "extra": {}
     }
+
+def test_many_kwargs():
+    assert create_user("Marie", "Curie", age=66, occupation="physicist", won_nobel=True) == \
+        {
+        "name": "Marie",
+        "surname": "Curie",
+        "age": 66,
+        "extra": {
+            "occupation": "physicist",
+            "won_nobel": True
+        }
+    }
