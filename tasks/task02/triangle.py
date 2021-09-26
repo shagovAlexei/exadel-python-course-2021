@@ -1,4 +1,4 @@
-# Shagov Aleksei 
+# Shagov Aleksei  
 
 import math
 
