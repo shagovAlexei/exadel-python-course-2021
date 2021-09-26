@@ -30,7 +30,6 @@ def test_math_4x4():
 def test_collect_leaves():
     assert my_pow(4, 4) == 256
 
-
 def collect_leaves(tree, list_final=[]):
     if (isinstance(tree, dict)):
         for key in tree:
@@ -39,8 +38,9 @@ def collect_leaves(tree, list_final=[]):
             if (isinstance(value, dict)):
                 collect_leaves(value)
             elif (isinstance(value, list)):
-                print(value)
-
+                for list_item in value:
+                    list_final.append(list_item)
+                    print(list_item)
 
 
 collect_leaves(tree)
