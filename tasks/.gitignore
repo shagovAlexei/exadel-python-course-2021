@@ -12,6 +12,8 @@ dist/
 
 # Compiled Python bytecode
 *.py[cod]
+.pytest_cache/
+__pycache__/
 
 # Log files
 *.log
@@ -68,3 +70,4 @@ temp.*
 commands.md
 
 ssh_pubkey.env
+
