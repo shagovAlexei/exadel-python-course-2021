@@ -27,3 +27,12 @@ def test_two_params():
         "age": 42,
         "extra": {}
     }
+
+def test_tree_params():
+    assert create_user("Bill", "Gates", age=65) == \
+        {
+        "name": "Bill",
+        "surname": "Gates",
+        "age": 65,
+        "extra": {}
+    }
