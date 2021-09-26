@@ -45,5 +45,8 @@ def collect_leaves(tree, list_final=[]):
                 print(f"{value} is non list or dict")
     elif (isinstance(tree, list)):
         return(tree)
-        
+    else:
+        pass
+    
+
 collect_leaves(tree)
