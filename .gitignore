@@ -62,7 +62,7 @@ terraform.tfstate.backup
 .terraform.lock.hcl
 terraform.tfstate
 .terraform.tfstate.lock.info
-*.code-workspace
+workspace.code-workspace
 
 .vagrant
 
