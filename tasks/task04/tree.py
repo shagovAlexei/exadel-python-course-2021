@@ -23,9 +23,6 @@ def test_math_3x3():
 def test_math_4x4():
     assert my_pow(4, 4) == 256
 
-def test_math_5x5():
-    assert my_pow(5, 5) == 3125
-
 
 def my_pow(a, b):
     return (pow(a, b))
