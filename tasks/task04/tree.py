@@ -36,3 +36,6 @@ def collect_leaves(tree, list_final=[]):
         for key in tree:
             value = tree[key]
             print(value)
+
+
+collect_leaves(tree)
