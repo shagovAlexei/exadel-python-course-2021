@@ -2,7 +2,6 @@
 
 import math
 
-
 def check_positive(s):
     try:
         f = int(s)
@@ -12,7 +11,6 @@ def check_positive(s):
         return False
     except ValueError:
         return False
-
 
 def calculate_are_by_base_and_height():
     str = input("Enter your base and height (example: 5 6): ")
@@ -26,7 +24,6 @@ def calculate_are_by_base_and_height():
     else:
         print(print_error)
 
-
 def calculate_are_by_sides_and_angle():
     str = input("Enter 2 sides and angle between them (example: 15 8 30): ")
     print_error = "Invalid input data! Enter two positive number and angle >= 180"
@@ -39,7 +36,6 @@ def calculate_are_by_sides_and_angle():
         return print(f"Area is: {area:.0f}")
     else:
         print(print_error)
-
 
 def main():
     menu_number = True
