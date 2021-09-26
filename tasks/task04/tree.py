@@ -36,6 +36,11 @@ def collect_leaves(tree, list_final=[]):
         for key in tree:
             value = tree[key]
             print(value)
+            if (isinstance(value, dict)):
+                collect_leaves(value)
+            elif (isinstance(value, list)):
+                print(value)
+
 
 
 collect_leaves(tree)
