@@ -27,11 +27,5 @@ def test_math_4x4():
 def my_pow(a, b):
     return (pow(a, b))
 
-# def test_with_dict_of_dicts():
-#     assert collect_leaves(tree) == [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-# def test_with_list():
-#     assert collect_leaves([1, 2, 3]) == [1, 2, 3]
-
 # def collect_leaves(tree, list_final=[]):
 #     pass
