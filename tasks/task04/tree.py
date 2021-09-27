@@ -35,25 +35,15 @@ def test_with_dict_of_dicts():
 def test_with_list():
     assert collect_leaves([1, 2, 3]) == [1, 2, 3]
 
-def collect_leaves(tree, list_final=[]):
-    if (isinstance(tree, dict)):
+def collect_leaves(tree):
+    if isinstance(tree, dict):
+        list_final = []
         for key in tree:
             value = tree[key]
             # print(value)
-            if (isinstance(value, dict)):
-                collect_leaves(value)
-            elif (isinstance(value, list)):
-                for list_item in value:
-                    list_final.append(list_item)
-                    # print(list_item)
-            else:
-                print(f"{value} is non list or dict")
-    elif (isinstance(tree, list)):
-        return(tree)
-    else:
-        list_final = []
-        list_final.append(tree)
+            list_final.extend(collect_leaves(value))
+        return list_final
+    return(tree)
 
-    return(list_final)
 
 # collect_leaves(tree)
