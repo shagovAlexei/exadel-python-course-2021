@@ -15,7 +15,7 @@ tree = {
 }
 
 def my_pow(a, b):
-    return (pow(a, b))
+    return pow(a, b)
 
 def test_math_pow_2x2():
     assert my_pow(2, 2) == 4
