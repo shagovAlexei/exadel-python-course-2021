@@ -1,10 +1,13 @@
 import time
-
+from datetime import datetime
 
 def measure_elapsed_time(func):
     def wrapper(*args, **kwargs):
         print(f"calling {func.__name__}")
-
+        start = datetime.now()
+        result = func(*args, **kwargs)
+        print(f"{func.__name__} call took {datetime.now() - start} seconds")
+        return result
     return wrapper
 
 
