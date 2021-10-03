@@ -4,12 +4,12 @@ from datetime import datetime
 def measure_elapsed_time(func):
     def wrapper(*args, **kwargs):
         print(f"calling {func.__name__}")
-        start = datetime.now()
+        start = time.time()
         result = func(*args, **kwargs)
-        print(f"{func.__name__} call took {datetime.now() - start} sec")
+        end = time.time()
+        print(f"{func.__name__} call took {str(round(end - start, 2))} seconds")
         return result
     return wrapper
-
 
 @measure_elapsed_time
 def my_fn1(arg1, arg2):
@@ -29,3 +29,4 @@ def my_fn3(arg1, **kwargs):
 
 print("my_fn1 result:", my_fn1(1, 2))
 my_fn2()
+my_fn3(12, kwarg1='lol', kwarg2='kek')
