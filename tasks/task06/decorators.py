@@ -25,7 +25,6 @@ def my_fn3(arg1, **kwargs):
     time.sleep(0.3)
     print(f"I also do nothing, but I have arg1 = {arg1} and kwargs = {kwargs}")
 
-
 print("my_fn1 result:", my_fn1(1, 2))
 my_fn2()
 my_fn3(12, kwarg1='lol', kwarg2='kek')
