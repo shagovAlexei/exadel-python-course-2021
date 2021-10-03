@@ -6,7 +6,7 @@ def measure_elapsed_time(func):
         print(f"calling {func.__name__}")
         start = datetime.now()
         result = func(*args, **kwargs)
-        print(f"{func.__name__} call  {datetime.now() - start} seconds")
+        print(f"{func.__name__} call took {datetime.now() - start} sec")
         return result
     return wrapper
 
@@ -17,9 +17,15 @@ def my_fn1(arg1, arg2):
     return arg1 + arg2
 
 @measure_elapsed_time
-def test_func2(name: str, status: bool):
+def my_fn2():
     time.sleep(0.8)
-    print("My name is {}, and my status is {}".format(name, status))
+    print("I do nothing! What a life")
+
+@measure_elapsed_time
+def my_fn3(arg1, **kwargs):
+    time.sleep(0.3)
+    print(f"I also do nothing, but I have arg1 = {arg1} and kwargs = {kwargs}")
 
 
 print("my_fn1 result:", my_fn1(1, 2))
+my_fn2()
