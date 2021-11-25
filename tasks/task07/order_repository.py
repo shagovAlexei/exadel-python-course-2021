@@ -5,6 +5,8 @@ class Good:
         self.product_id = product_id
         self.name = name
         self.price = price
+    def __str__(self):
+        return f"product_id: {self.product_id}\tname: {self.name}\tprice: {self.price}"
 
 class Order:
     def __init__(self, order_id, order_date, client_id):
@@ -18,3 +20,6 @@ class OrderRepository:
     order: Order = None
     order_id: int = None
     latest: int = None
+
+
+good1 = Good("123", "mouse", 34)
